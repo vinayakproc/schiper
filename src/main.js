@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 import { BootstrapVue } from 'bootstrap-vue'
 import VueCompositionAPI from '@vue/composition-api'
 import { MapsPlugin } from '@syncfusion/ej2-vue-maps'
@@ -16,6 +17,12 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(VueCompositionAPI)
 Vue.use(MapsPlugin)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyDQCD7xbwEenOh8NLAIq9EHAlYNRktYUG8',
+    libraries: 'places'
+  }
+})
 
 new Vue({
   router,

@@ -31,7 +31,7 @@
 
   </pre>
   <div><Cats/></div>
-  <div><ejs-maps></ejs-maps></div>
+  <div><GoogleMap /></div>
 </div>
 </template>
 
@@ -41,19 +41,39 @@ import Vue from 'vue'
 import Slider from '@vueform/slider/dist/slider.vue2.js'
 import Cats from './Cats.vue'
 import { MapsPlugin } from '@syncfusion/ej2-vue-maps'
+import GoogleMap from './GoogleMap.vue'
 Vue.use(MapsPlugin)
 
 export default {
   components: {
     Slider,
     Cats,
-    MapsPlugin
+    MapsPlugin,
+    GoogleMap
   },
   data () {
     return {
       value: [2, 8],
       format: function (value) {
         var array1 = []
+        array1.push('01-01-2021')
+        array1.push('01-02-2021')
+        array1.push('01-03-2021')
+        array1.push('01-04-2021')
+        array1.push('01-05-2021')
+        array1.push('01-06-2021')
+        array1.push('01-07-2021')
+        array1.push('01-08-2021')
+        array1.push('01-09-2021')
+        array1.push('01-01-2021')
+        array1.push('01-02-2021')
+        array1.push('01-03-2021')
+        array1.push('01-04-2021')
+        array1.push('01-05-2021')
+        array1.push('01-06-2021')
+        array1.push('01-07-2021')
+        array1.push('01-08-2021')
+        array1.push('01-09-2021')
         array1.push('01-01-2021')
         array1.push('01-02-2021')
         array1.push('01-03-2021')
