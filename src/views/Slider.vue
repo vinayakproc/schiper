@@ -2,36 +2,35 @@
 
 <template>
   <div>
-    <b-container>
-    <Slider v-model="value" :format="format"/>
+    <b-container style="border-style:solid">
+    <b-container fluid>
+      <pre>
+      </pre>
+    <Slider v-model="value" :format="format" :max="max" />
     </b-container>
     <pre>
-
-  </pre>
-  <b-card-group deck>
-    <b-card title="Total Physicians" style="color:red">
-      <b-card-text>
-        289
-      </b-card-text>
-    </b-card>
-
-    <b-card title="Total Patients" style="color:red">
-      <b-card-text>
-        3,675
-      </b-card-text>
-    </b-card>
-
-    <b-card title="IR Signal" style="color:red">
-      <b-card-text>
-        1,393
-      </b-card-text>
-    </b-card>
-  </b-card-group>
-  <pre>
-
-  </pre>
-  <div><Cats/></div>
+    </pre>
+  <b-container fluid>
+    <b-row>
+      <b-col>
+  <div><Dropdown /></div>
+      </b-col>
+      <b-col>
+  <div><Cards/></div>
+      </b-col>
+    </b-row>
+    <b-row>
+  <b-col>
   <div><GoogleMap /></div>
+      </b-col>
+      <b-col>
+        <pre>
+        </pre>
+  <div><Cats/></div>
+      </b-col>
+    </b-row>
+  </b-container>
+    </b-container>
 </div>
 </template>
 
@@ -42,6 +41,8 @@ import Slider from '@vueform/slider/dist/slider.vue2.js'
 import Cats from './Cats.vue'
 import { MapsPlugin } from '@syncfusion/ej2-vue-maps'
 import GoogleMap from './GoogleMap.vue'
+import Dropdown from './Dropdown.vue'
+import Cards from './Card.vue'
 Vue.use(MapsPlugin)
 
 export default {
@@ -49,11 +50,14 @@ export default {
     Slider,
     Cats,
     MapsPlugin,
-    GoogleMap
+    GoogleMap,
+    Dropdown,
+    Cards
   },
   data () {
     return {
-      value: [2, 8],
+      value: [0, 8],
+      max: 51,
       format: function (value) {
         var array1 = []
         array1.push('01-01-2021')

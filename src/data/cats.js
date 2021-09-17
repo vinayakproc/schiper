@@ -24,7 +24,17 @@ export default [
             "IR Signal":"10"
         },
         {
+            "Physicians":"H",
+            "Total Patients":"233",
+            "IR Signal":"103"
+        },
+        {
             "Physicians":"F",
+            "Total Patients":"23",
+            "IR Signal":"10"
+        },
+        {
+            "Physicians":"M",
             "Total Patients":"23",
             "IR Signal":"10"
         },

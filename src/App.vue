@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Scipher</router-link>
+      <router-link to="/" style="font-size: 30px">Scipher</router-link>
       <!-- <router-link to="/cats">Cats</router-link> |
       <router-link to="/dogs">Dogs</router-link> |
       <router-link to="/pets">Pets</router-link> -->
